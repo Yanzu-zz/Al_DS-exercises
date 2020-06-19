@@ -1,6 +1,9 @@
 #include <ctime>
 #include <iostream>
 #include <cassert>
+#include <cstdlib>
+#include <algorithm>
+#include "Sorts.h"
 
 using namespace std;
 
@@ -85,7 +88,7 @@ namespace SortTestHelper
     assert(isSorted(arr, n));
     cout << sortName << " : " << double(endTime - startTime) / CLOCKS_PER_SEC << " s" << endl;
 
-    return;
+    return;f
   }
 
   int *copyIntArray(int a[], int n)
