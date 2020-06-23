@@ -1,3 +1,5 @@
+#include "./Heap.h"
+
 template <typename T>
 void insertionSort(T arr[], int n)
 {
@@ -192,5 +194,34 @@ void quickSort3Ways(T arr[], int n)
 {
   srand(time(NULL));
   __quickSort3Ways(arr, 0, n - 1);
+}
+
+
+// 第一版堆排序
+template <typename T>
+void heapSort1(T arr[], int n)
+{
+  MaxHeap<T> maxheap = MaxHeap<T>(n);
+  for (int i = 0; i < n; i++)
+  {
+    maxheap.insert(arr[i]);
+  }
+
+  for (int i = n - 1; i >= 0; i--)
+  {
+    arr[i] = maxheap.extractMax();
+  }
+}
+
+// Heapify
+template <typename T>
+void heapSort2(T arr[], int n)
+{
+  MaxHeap<T> maxheap = MaxHeap<T>(arr, n);
+
+  for (int i = n - 1; i >= 0; i--)
+  {
+    arr[i] = maxheap.extractMax();
+  }
 }
 
