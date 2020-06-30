@@ -66,6 +66,20 @@ public:
     m++;
   }
 
+  // 展示顶点相连通情况
+  void show()
+  {
+    for (int i = 0; i < n; i++)
+    {
+      cout << "vertex " << i << ":\t";
+      for (int j = 0; j < g[i].size(); j++)
+      {
+        cout << g[i][j] << "\t";
+      }
+      cout << endl;
+    }
+  }
+
   // SparseGraph 相邻顶点的迭代器类
   // 用这种子类的方法可以避免向用户曝光 g 图中的数据（因为迭代器可以隐藏迭代的过程）
   class adjIterator

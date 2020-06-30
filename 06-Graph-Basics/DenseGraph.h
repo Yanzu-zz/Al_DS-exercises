@@ -65,6 +65,19 @@ public:
     m++; // 维护总边数量
   }
 
+  // 展示顶点相连通情况
+  void show()
+  {
+    for (int i = 0; i < n; i++)
+    {
+      for (int j = 0; j < n; j++)
+      {
+        cout << g[i][j] << "\t";
+      }
+      cout << endl;
+    }
+  }
+
   // 稠密图的邻边迭代器（循环）
   class adjIterator
   {
