@@ -1,3 +1,6 @@
+#ifndef SPARSEGRAPH_H
+#define SPARSEGRAPH_H
+
 #include <iostream>
 #include <vector>
 #include <cassert>
@@ -137,3 +140,5 @@ public:
     }
   };
 };
+
+#endif

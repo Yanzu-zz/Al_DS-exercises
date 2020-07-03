@@ -1,3 +1,7 @@
+#ifndef DENSEGRAPH_H
+#define DENSEGRAPH_H
+
+
 #include <iostream>
 #include <vector>
 #include <cassert>
@@ -147,3 +151,5 @@ public:
     }
   };
 };
+
+#endif

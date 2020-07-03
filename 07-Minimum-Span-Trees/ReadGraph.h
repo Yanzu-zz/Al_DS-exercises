@@ -1,3 +1,6 @@
+#ifndef READGRAPH_H
+#define READGRAPH_H
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -49,3 +52,5 @@ public:
 
   ~ReadGraph(){};
 };
+
+#endif
