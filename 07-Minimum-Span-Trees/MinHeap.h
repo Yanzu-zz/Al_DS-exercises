@@ -1,5 +1,5 @@
-#ifndef HEAP_MINHEAP_H
-#define HEAP_MINHEAP_H
+#ifndef INC_06_KRUSKAL_ALGORITHM_MINHEAP_H
+#define INC_06_KRUSKAL_ALGORITHM_MINHEAP_H
 
 #include <algorithm>
 #include <cassert>
@@ -97,6 +97,14 @@ public:
     assert(count > 0);
     return data[1];
   }
+
+  void show()
+  {
+    cout << "| ";
+    for (int i = 1; i <= count; i++)
+      cout << data[i]->wt() /*<<","<<data[i]*/ << " | ";
+    cout << endl;
+  }
 };
 
-#endif //HEAP_MINHEAP_H
+#endif //INC_06_KRUSKAL_ALGORITHM_MINHEAP_H
