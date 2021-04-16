@@ -32,6 +32,19 @@ public class AVLTree<K extends Comparable<K>, V> {
         return size == 0;
     }
 
+    private Node getNode(Node node, K key) {
+        Node cur = node;
+        while (cur != null) {
+            if (key.compareTo(node.key) < 0)
+                cur = cur.left;
+            else if (key.compareTo(node.key) > 0)
+                cur = cur.right;
+            else
+                return cur;
+        }
+        return null;
+    }
+
     // 判断是否为一颗二叉搜索树
     public boolean isBST() {
         ArrayList<K> keys = new ArrayList<>();
@@ -119,6 +132,23 @@ public class AVLTree<K extends Comparable<K>, V> {
         root = add(root, key, value);
     }
 
+    public V remove(K key) {
+        Node node = getNode(root, key);
+        if (node != null) {
+            root = remove(root, key);
+            return node.value;
+        }
+        return null;
+    }
+
+    private Node minimum(Node node) {
+        Node retNode = node;
+        while (retNode != null)
+            retNode = retNode.left;
+
+        return retNode;
+    }
+
     // 向以 node 为根的二分搜索树中插入元素（key, value），递归算法
     // 返回插入新结点后二分搜索树的根
     private Node add(Node node, K key, V value) {
@@ -143,19 +173,93 @@ public class AVLTree<K extends Comparable<K>, V> {
             System.out.println("unbalanced: " + balanceFactor);
 
         // 平衡维护
-        // 下面的判断就是在左侧的左侧多插入了一个结点使得树不平衡，进行右旋转
+        // LL
         if (balanceFactor > 1 && getBalanceFactor(node.left) >= 0)
             return rightRotate(node);
 
-        // 右子树多加了结点
+        // RR
         if (balanceFactor < -1 && getBalanceFactor(node.right) <= 0)
             return leftRotate(node);
+
+        // LR
+        if (balanceFactor > 1 && getBalanceFactor(node.left) < 0) {
+            // 先对左子树进行左转操作，然后就和处理普通的 LL 一样了
+            node.left = leftRotate(node.left);
+            return rightRotate(node);
+        }
+
+        // RL
+        if (balanceFactor < -1 && getBalanceFactor(node.right) > 0) {
+            node.right = rightRotate(node.right);
+            return leftRotate(node);
+        }
 
         return node;
     }
 
-    public static void main(String[] args) {
-        System.out.println("Pride and Prejudice");
+    private Node remove(Node node, K key) {
+        if (node == null)
+            return null;
 
+        Node retNode;
+        if (key.compareTo(node.key) < 0) {
+            node.left = remove(node.left, key);
+            retNode = node;
+        } else if (key.compareTo(node.key) > 0) {
+            node.right = remove(node.right, key);
+            retNode = node;
+        } else {
+            if (node.left == null) {
+                Node rightNode = node.right;
+                node.right = null;
+                size--;
+                retNode = rightNode;
+            } else if (node.right == null) {
+                Node leftNode = node.left;
+                node.left = null;
+                size--;
+                retNode = leftNode;
+            } else {
+                Node successor = minimum(node.right);
+                successor.right = remove(node.right, successor.key);
+                successor.left = node.left;
+
+                node.left = node.right = null;
+                retNode = successor;
+            }
+        }
+
+        if (retNode == null)
+            return null;
+
+        // 更新 height
+        retNode.height = 1 + Math.max(getHeight(retNode.left), getHeight(retNode.right));
+
+        // 计算平衡因子
+        int balanceFactor = getBalanceFactor(retNode);
+
+        // 平衡维护
+        // LL
+        if (balanceFactor > 1 && getBalanceFactor(retNode.left) >= 0)
+            return rightRotate(retNode);
+
+        // RR
+        if (balanceFactor < -1 && getBalanceFactor(retNode.right) <= 0)
+            return leftRotate(retNode);
+
+        // LR
+        if (balanceFactor > 1 && getBalanceFactor(retNode.left) < 0) {
+            // 先对左子树进行左转操作，然后就和处理普通的 LL 一样了
+            retNode.left = leftRotate(retNode.left);
+            return rightRotate(retNode);
+        }
+
+        // RL
+        if (balanceFactor < -1 && getBalanceFactor(retNode.right) > 0) {
+            retNode.right = rightRotate(retNode.right);
+            return leftRotate(retNode);
+        }
+
+        return retNode;
     }
 }
