@@ -145,6 +145,18 @@ class RBTree<K extends Comparable<K>, V> {
         else
             node.value = value; // 覆盖
 
+        // 查看需不需要左旋转
+        if (isRed(node.right) && !isRed(node.left))
+            node = leftRotate(node);
+
+        // 右旋转
+        if (isRed(node.left) && isRed(node.left.left))
+            node = rightRotate(node);
+
+        // 颜色翻转情况
+        if (isRed(node.left) && isRed(node.right))
+            flipColors(node);
+
         return node;
     }
 
