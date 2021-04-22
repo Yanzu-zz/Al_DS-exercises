@@ -16,11 +16,6 @@ public class AVLMap<K extends Comparable<K>, V> implements Map<K, V> {
     }
 
     @Override
-    public void add(K key, V value) {
-        avl.add(key, value);
-    }
-
-   /* @Override
     public boolean contains(K key) {
         return avl.contains(key);
     }
@@ -33,7 +28,12 @@ public class AVLMap<K extends Comparable<K>, V> implements Map<K, V> {
     @Override
     public void set(K key, V newValue) {
         avl.set(key, newValue);
-    }*/
+    }
+
+    @Override
+    public void add(K key, V value) {
+        avl.add(key, value);
+    }
 
     @Override
     public V remove(K key) {

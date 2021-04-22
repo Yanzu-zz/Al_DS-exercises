@@ -10,7 +10,6 @@ public class Main {
         for (int i = 0; i < n; i++)
             testData.add(random.nextInt(Integer.MAX_VALUE));
 
-
         // Test AVL
         long startTime = System.nanoTime();
 

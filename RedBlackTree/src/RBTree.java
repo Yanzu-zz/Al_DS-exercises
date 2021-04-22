@@ -192,4 +192,21 @@ class RBTree<K extends Comparable<K>, V> {
             }
         }
     }
+
+    public boolean contains(K key) {
+        return getNode(root, key) != null;
+    }
+
+    public V get(K key) {
+        Node node = getNode(root, key);
+        return node == null ? null : node.value;
+    }
+
+    public void set(K key, V newValue) {
+        Node node = getNode(root, key);
+        if (node == null)
+            throw new IllegalArgumentException(key + " doesn't exist!");
+
+        node.value = newValue;
+    }
 }
