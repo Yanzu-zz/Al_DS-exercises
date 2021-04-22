@@ -1,19 +1,29 @@
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
-        String rootDir = "src\\";
-        String fileName1 = rootDir + "Les_Miserables.txt";
-        System.out.println(fileName1);
-        ArrayList<String> words1 = new ArrayList<>();
+    private static double testSet(Set<String> set, String filename) {
+        long startTime = System.nanoTime();
+        filename = "src\\" + filename;
+        System.out.println(filename);
 
-        if (FileOperation.readFile(fileName1, words1)) {
-            System.out.println("Total words: " + words1.size());
+        ArrayList<String> words = new ArrayList<>();
+        if (FileOperation.readFile(filename, words)) {
+            System.out.println("Total words: " + words.size());
 
-            BSTSet<String> set1 = new BSTSet<>();
-            for (String word : words1)
-                set1.add(word);
-            System.out.println("Total different words: " + set1.getSize());
+            for (String word : words)
+                set.add(word);
+            System.out.println("Total different words: " + set.getSize());
         }
+        long endTime = System.nanoTime();
+
+        return (endTime - startTime) / 1000000000.0;
+    }
+
+    public static void main(String[] args) {
+        String filename = "The_Hobbit.txt";
+
+        BSTSet<String> bstSet = new BSTSet<>();
+        double time1 = testSet(bstSet, filename);
+        System.out.println("BST Set: " + time1 + " s");
     }
 }
