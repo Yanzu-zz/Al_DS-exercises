@@ -1,6 +1,6 @@
 import java.util.TreeSet;
 
-class Solution {
+class Solution804 {
     public int uniqueMorseRepresentations(String[] words) {
         String[] codes = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
 
