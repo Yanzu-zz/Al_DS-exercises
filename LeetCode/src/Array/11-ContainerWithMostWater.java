@@ -1,6 +1,6 @@
 package Array;
 
-class Solution {
+class Solution11 {
     public static int maxArea(int[] height) {
         int i = 0, j = height.length - 1;
         int maxLiter = 0;
