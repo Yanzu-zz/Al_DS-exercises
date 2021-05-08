@@ -1,6 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.Objects;
-
 public class SegmentTree<E> {
     private E[] data;
     private E[] tree;
