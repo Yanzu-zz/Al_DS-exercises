@@ -1,0 +1,4 @@
+D:\Dev_Software\CLion_2021\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Front-End\Github_Projects\Al_DS-structure\Dynamic_Programming
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug

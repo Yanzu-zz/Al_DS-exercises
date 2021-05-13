@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Dynamic_Programming"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Dynamic_Programming">
+				<Option output="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Dynamic_Programming.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include/c++"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include/c++/backward"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 Dynamic_Programming"/>
+					<CompileFile command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Dynamic_Programming/fast">
+				<Option output="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Dynamic_Programming.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include/c++"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include/c++/backward"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="D:/Dev_Software/MingW/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 Dynamic_Programming/fast"/>
+					<CompileFile command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Dev_Software/MingW/bin/mingw32-make.exe -f &quot;D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/Fibonacci/dp_optimized.cpp">
+			<Option target="Dynamic_Programming"/>
+		</Unit>
+		<Unit filename="D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

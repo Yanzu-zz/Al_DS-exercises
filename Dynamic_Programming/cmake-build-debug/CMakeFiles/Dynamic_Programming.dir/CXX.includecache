@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Front-End/Github_Projects/Al_DS-structure/Dynamic_Programming/Fibonacci/dp_optimized.cpp
+iostream
+-
+vector
+-
+ctime
+-
+
