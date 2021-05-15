@@ -1,6 +1,6 @@
 import java.util.Random;
 
-class StudentSolution {
+public class Main {
     // 验证计数排序算法的正确性和稳定性
     private static void checkStability(Student[] students) {
         int n = students.length;
